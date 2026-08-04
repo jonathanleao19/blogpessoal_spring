@@ -66,7 +66,6 @@ public class Postagem {
 	}
 	
 	
-
 	public String getTexto() {
 		return texto;
 	}
@@ -83,6 +82,17 @@ public class Postagem {
 		this.data = data;
 	}
 	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	
 
 }
